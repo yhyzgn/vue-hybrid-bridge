@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="hybrid/hybrid.js"></script>
+    <script>
+        $(function () {
+            var test = $("div").find(".parent").find(".test-p-1");
+            console.log(test);
+            test.click(function () {
+                console.log(this);
+                test.text("哈哈").haha();
+            });
+        }).extend({
+            haha: function () {
+                alert("哈哈");
+            }
+        });
+    </script>
+</head>
+<body>
+<div id="test">id test</div>
+<div class="clazz">class test</div>
+<div class="clazz">class test</div>
+<div class="clazz">class test</div>
+<div>
+    <div class="parent">
+        <div><p class="test-p-1">CSS模拟</p></div>
+        <div><p class="test-p-2">CSS模拟</p></div>
+    </div>
+</div>
+</body>
+</html>
