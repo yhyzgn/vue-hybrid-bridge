@@ -3,32 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-    <script src="hybrid/hybrid.js"></script>
+    <style>
+        #test {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            background: #ff4400;
+            margin: 48px auto 0px;
+            color: #ffffff;
+        }
+    </style>
+    <script src="hybrid/hybrid.js" config="hybrid/config.json"></script>
     <script>
-        $(function () {
-            var test = $("div").find(".parent").find(".test-p-1");
-            console.log(test);
-            test.click(function () {
-                console.log(this);
-                test.text("哈哈").haha();
+        $(function (mobile, android, ios) {
+            if (mobile) {
+                console.log("移动端");
+                if (android) {
+                    $("#test").text("Android");
+                } else if (ios) {
+                    $("#test").text("IOS");
+                }
+            } else {
+                $("#test").text("PC端");
+            }
+
+            $("#test").click(function () {
+                $(this).handle(test, {
+                    name: "张三",
+                    age: 24
+                });
             });
-        }).extend({
-            haha: function () {
-                alert("哈哈");
+
+            function test(args) {
+                console.log(args);
             }
         });
     </script>
 </head>
 <body>
-<div id="test">id test</div>
-<div class="clazz">class test</div>
-<div class="clazz">class test</div>
-<div class="clazz">class test</div>
-<div>
-    <div class="parent">
-        <div><p class="test-p-1">CSS模拟</p></div>
-        <div><p class="test-p-2">CSS模拟</p></div>
-    </div>
-</div>
+<div id="test">点击试试</div>
 </body>
 </html>
