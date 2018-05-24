@@ -11,13 +11,13 @@
         throw new Error("框架加载错误");
     }
 
+    // 定义框架的访问通道
+    window.Hybrid = window.Hy = Hybrid = Hy = fn;
+
     // 类属性/方法扩展
     for (let key in extend) {
         fn[key] = extend[key];
     }
-
-    // 定义框架的访问通道
-    window.Hybrid = window.Hy = Hybrid = Hy = fn;
 })(function () {
 }, {
     /**
@@ -59,7 +59,15 @@
      */
     init: function (config, callback) {
         let cb = callback;
-        Hybrid.event(document, "DOMContentLoaded", function () {
+        if (document.readyState === "interactive" || document.readyState === "complete") {
+            console.log("之前已经即在完成，强制初始化框架！");
+            doInit()
+        } else {
+            console.log("未加载完成，加载完成后初始化框架！");
+            Hybrid.event(document, "DOMContentLoaded", doInit);
+        }
+
+        function doInit() {
             if (arguments.length === 1) {
                 callback = arguments[0];
                 config = null;
@@ -70,8 +78,8 @@
                 }
             }
             Hybrid.environment(function (mobile, android, ios) {
-                let as = document.getElementsByTagName("a");
-                if (as) {
+                let as = null;
+                if (mobile && (as = document.getElementsByTagName("a"))) {
                     let href = null;
                     for (let i = 0; i < as.length; i++) {
                         href = as[i].getAttribute("href");
@@ -85,7 +93,7 @@
                 }
                 cb(mobile, android, ios);
             });
-        });
+        }
     },
 
     /**
