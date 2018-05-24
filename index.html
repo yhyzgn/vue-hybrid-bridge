@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style>
+        #test {
+            width: 200px;
+            height: 100px;
+            background-color: #ff4400;
+            font-size: 0.75rem;
+            line-height: 100px;
+            text-align: center;
+            color: #ffffff;
+            margin: 100px auto 0px;
+        }
+    </style>
+    <script src="hybrid/hybrid.js"></script>
+    <script>
+        function print(text) {
+            console.log(text);
+        }
+
+        function environment(mobile, android, ios) {
+            if (mobile) {
+                if (android) {
+                    print("Android")
+                } else if (ios) {
+                    print("IOS")
+                } else {
+                    print("Other mobile")
+                }
+            } else {
+                print("PC")
+            }
+        }
+
+        Hy.init({
+            urlFlagValue: "app"
+        }, function (mobile, android, ios) {
+            environment(mobile, android, ios);
+
+            Hy.register({
+                haha: function (callback) {
+                    if (typeof callback === "function") {
+                        callback("哈哈");
+                    }
+                }
+            });
+
+            let test = document.getElementById("test");
+            Hy.click(test, function () {
+                Hy.native("test", {
+                    name: "张三",
+                    age: 24
+                }, function (result) {
+                    test.textContent = result;
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="test">点击试试</div>
+</body>
+</html>
