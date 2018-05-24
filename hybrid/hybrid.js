@@ -320,16 +320,23 @@ Hybrid.fn = Hybrid.prototype = {
                     args = null;
                 }
 
-                // TODO 回调原生
                 if (Hybrid.browser.versions.android && typeof null !== data.bridge) {
-                    window.bridge = data.bridge;
-                    fn.call(window.bridge, args);
+                    if (window.app) {
+                        fn.call(window.app, args);
+                    } else {
+                        let appEvt = document.createEvent("Events");
+                        appEvt.initEvent(data.bridge, false, false);
+                        Hybrid.addEvent(document, data.bridge, function () {
+                            fn(args);
+                        });
+                        document.dispatchEvent(appEvt);
+                    }
                 } else if (Hybrid.browser.versions.ios) {
                     fn.call(window, args);
                 }
             })
         } else {
-            // PC端，直接执行犯法即可
+            // PC端，直接执行方法即可
             fn.call(window, args);
         }
     },
@@ -379,6 +386,9 @@ Hybrid.plugins({
             };
         }(),
         language: (navigator.browserLanguage || navigator.language).toLowerCase()
+    },
+    init: function () {
+
     },
     addEvent: function (element, type, fn) {
         if (typeof element.addEventListener !== "undefined") {

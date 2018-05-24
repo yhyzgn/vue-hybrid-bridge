@@ -16,28 +16,38 @@
     </style>
     <script src="hybrid/hybrid.js" config="hybrid/config.json"></script>
     <script>
-        $(function (mobile, android, ios) {
-            if (mobile) {
-                console.log("移动端");
-                if (android) {
-                    $("#test").text("Android");
-                } else if (ios) {
-                    $("#test").text("IOS");
-                }
-            } else {
-                $("#test").text("PC端");
-            }
+        // $(function (mobile, android, ios) {
+        //     if (mobile) {
+        //         console.log("移动端");
+        //         if (android) {
+        //             $("#test").text("Android");
+        //         } else if (ios) {
+        //             $("#test").text("IOS");
+        //         }
+        //     } else {
+        //         $("#test").text("PC端");
+        //     }
+        //
+        //     $("#test").click(function () {
+        //         $(this).handle(test, {
+        //             name: "张三",
+        //             age: 24
+        //         });
+        //     });
+        //
+        //     function test(args) {
+        //         console.log(args);
+        //     }
+        // });
 
-            $("#test").click(function () {
-                $(this).handle(test, {
-                    name: "张三",
-                    age: 24
-                });
+
+        $(function () {
+            let evt = document.createEvent('Events');
+            evt.initEvent("alert", false, true);
+            Hybrid.addEvent(document, "alert", function () {
+                alert(2);
             });
-
-            function test(args) {
-                console.log(args);
-            }
+            document.dispatchEvent(evt);
         });
     </script>
 </head>
