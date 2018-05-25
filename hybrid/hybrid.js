@@ -22,10 +22,16 @@
 }, {
     /**
      * 配置参数
+     *
+     * 根据前两个属性，可以辨别是WebView加载的网页还是手机浏览器加载的，如果是WebView加载的网页的话，就可以对页面做相应调整，比如隐藏某些按钮等；
+     * 第三个属性是Android端与js交互的桥梁，默认是window.app
      */
     config: {
+        // URL标识名称
         urlFlagName: "platform",
+        // URL标识值
         urlFlagValue: "app",
+        // Android端交互桥梁名称
         bridge: window.app
     },
 
@@ -54,7 +60,7 @@
 
     /**
      * 初始化方法
-     * @param config 配置参数
+     * @param config 配置参数（该参数可不传，代表使用默认配置）
      * @param callback 初始化回调方法
      */
     init: function (config, callback) {
@@ -78,6 +84,7 @@
                 }
             }
             Hybrid.environment(function (mobile, android, ios) {
+                // 为所有的a标签加上URL标识
                 let as = null;
                 if (mobile && (as = document.getElementsByTagName("a"))) {
                     let href = null;
@@ -120,7 +127,7 @@
      * @param name 方法名称
      * @param fn 方法体
      *
-     * 也可传入js对象类型的参数
+     * 当只传入一个参数时，该参数必须是js对象类型
      */
     register: function (name, fn) {
         if (arguments.length === 2) {
@@ -138,8 +145,8 @@
     /**
      * js调用原生方法
      * @param fn 方法名称
-     * @param args 要传递的参数，必须是js对象类型
-     * @param callback 方法调用结果的回调
+     * @param args 要传递的参数，必须是js对象类型（该参数可不传，代表不传递任何参数）
+     * @param callback 方法调用结果的回调（该参数可不传，代表没有任何回调）
      */
     native: function (fn, args, callback) {
         const outArgs = arguments;
