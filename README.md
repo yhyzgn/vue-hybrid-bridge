@@ -36,8 +36,8 @@
       urlFlagValue: "app"
   }, function (mobile, android, ios) {
       environment(mobile, android, ios);
-    
-    	// 后续的一些列操作都需要在这里执行
+      
+      // 后续的一些列操作都需要在这里执行  	
   });
 
   // 使用默认配置时，可以这样初始化
