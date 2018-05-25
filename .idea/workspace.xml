@@ -20,17 +20,8 @@
       <file leaf-file-name="hybrid.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="471">
-              <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state relative-caret-position="399">
+              <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -55,6 +46,7 @@
       <find>configUrl</find>
       <find>getConfig</find>
       <find>hybrid</find>
+      <find>bridge</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -67,8 +59,8 @@
         <option value="$PROJECT_DIR$/hybrid/config.json" />
         <option value="$PROJECT_DIR$/hybrid/easy.js" />
         <option value="$PROJECT_DIR$/hybrid/Hybrid.js" />
-        <option value="$PROJECT_DIR$/hybrid/hybrid.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/hybrid/hybrid.js" />
       </list>
     </option>
   </component>
@@ -92,6 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,7 +101,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -146,12 +138,13 @@
       <workItem from="1527122162797" duration="3090000" />
       <workItem from="1527130723335" duration="25000" />
       <workItem from="1527130978004" duration="11201000" />
-      <workItem from="1527147162296" duration="1786000" />
+      <workItem from="1527147162296" duration="1840000" />
+      <workItem from="1527211543359" duration="5299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53398000" />
+    <option name="totallyTimeSpent" value="58751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -240,8 +233,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="99" column="11" lean-forward="true" selection-start-line="99" selection-start-column="11" selection-end-line="99" selection-end-column="11" />
+        <state relative-caret-position="399">
+          <caret line="61" column="68" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
         </state>
       </provider>
     </entry>

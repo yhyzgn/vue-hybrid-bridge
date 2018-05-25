@@ -26,7 +26,7 @@
     config: {
         urlFlagName: "platform",
         urlFlagValue: "app",
-        inject: window.app
+        bridge: window.app
     },
 
     /**
@@ -60,10 +60,10 @@
     init: function (config, callback) {
         let cb = callback;
         if (document.readyState === "interactive" || document.readyState === "complete") {
-            console.log("之前已经即在完成，强制初始化框架！");
-            doInit()
+            console.log("页面已经加载完成，强制初始化框架！");
+            setTimeout(doInit, 1);
         } else {
-            console.log("未加载完成，加载完成后初始化框架！");
+            console.log("页面未加载完成，加载完成后初始化框架！");
             Hybrid.event(document, "DOMContentLoaded", doInit);
         }
 
@@ -145,20 +145,20 @@
         const outArgs = arguments;
         Hybrid.environment(function (mobile, android, ios) {
             if (mobile) {
-                let inject = android ? Hybrid.config.inject : ios ? window : undefined;
+                let bridge = android ? Hybrid.config.bridge : ios ? window : undefined;
 
-                if (inject === undefined || typeof inject[fn] === "undefined") {
+                if (bridge === undefined || typeof bridge[fn] === "undefined") {
                     return;
                 }
 
                 if (outArgs.length === 1) {
-                    inject[fn]();
+                    bridge[fn]();
                 } else if (outArgs.length >= 2) {
                     if (typeof outArgs[1] !== "object") {
                         throw new Error("需要传递到原生环境的参数必须是js对象类型");
                     }
                     args = JSON.stringify(args);
-                    let result = inject[fn](args);
+                    let result = bridge[fn](args);
                     if (typeof callback === "function") {
                         callback(result);
                     }
