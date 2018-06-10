@@ -46,8 +46,8 @@
   ```
   > `Hybrid.config`配置说明
 
-  ```json
-  {
+  ```javascript
+  config: {
       // 是否使用严格模式（不只是识别移动端内核浏览器，还需要判断“urlFlagName”参数），默认为true
       strict: true,
       // URL标识名称
