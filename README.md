@@ -32,6 +32,7 @@
 
   ```javascript
   // 使用自定义配置
+  // Hy.init({}, function(){});
   Hy.init({
       urlFlagValue: "app"
   }, function (mobile, android, ios) {
@@ -39,9 +40,23 @@
       
       // 后续的一些列操作都需要在这里执行  	
   });
-
+  
   // 使用默认配置时，可以这样初始化
   Hy.init(function(){});
+  ```
+  > `Hybrid.config`配置说明
+
+  ```json
+  {
+      // 是否使用严格模式（不只是识别移动端内核浏览器，还需要判断“urlFlagName”参数），默认为true
+      strict: true,
+      // URL标识名称
+      urlFlagName: "platform",
+      // URL标识值
+      urlFlagValue: "app",
+      // Android端交互桥梁名称
+      bridge: window.app
+  }
   ```
 
 * 注册函数到`js`环境，供移动端调用

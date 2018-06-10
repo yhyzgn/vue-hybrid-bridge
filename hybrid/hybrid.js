@@ -23,10 +23,13 @@
     /**
      * 配置参数
      *
-     * 根据前两个属性，可以辨别是WebView加载的网页还是手机浏览器加载的，如果是WebView加载的网页的话，就可以对页面做相应调整，比如隐藏某些按钮等；
-     * 第三个属性是Android端与js交互的桥梁，默认是window.app
+     * strict：是否使用严格模式，默认为true。即只有在移动端访问并且传入"urlFlagName=urlFlagValue"参数的情况下才能证明是真正的移动端（用来辨别浏览器和WebView访问）
+     * urlFlagName和urlFlagValue：可以辨别是WebView加载的网页还是手机浏览器加载的，如果是WebView加载的网页的话，就可以对页面做相应调整，比如隐藏某些按钮等；
+     * bridge：Android端与js交互的桥梁，默认是window.app
      */
     config: {
+        // 是否使用严格模式（不仅辨别是否是移动端内核浏览器，还需要判断“config.urlFlagName”参数），默认为true
+        strict: true,
         // URL标识名称
         urlFlagName: "platform",
         // URL标识值
@@ -65,6 +68,7 @@
      */
     init: function (config, callback) {
         let cb = callback;
+        let args = arguments;
         if (document.readyState === "interactive" || document.readyState === "complete") {
             console.log("页面已经加载完成，强制初始化框架！");
             setTimeout(doInit, 1);
@@ -74,8 +78,8 @@
         }
 
         function doInit() {
-            if (arguments.length === 1) {
-                callback = arguments[0];
+            if (args.length === 1) {
+                callback = args[0];
                 config = null;
             }
             if (config) {
@@ -186,8 +190,8 @@
     environment: function (callback) {
         let urlFlag = Hybrid.urlParam(Hybrid.config.urlFlagName);
         // 是否携带移动端WebView标志
-        if (urlFlag === Hybrid.config.urlFlagValue) {
-            // 只有携带urlFlag的页面，才算是移动端页面（便于区分wap站和WebView加载的页面）
+        if (!Hybrid.config.strict || urlFlag === Hybrid.config.urlFlagValue) {
+            // 只有非严格模式或者携带urlFlag的页面，才算是移动端页面（便于区分wap站和WebView加载的页面）
             callback(Hybrid.browser.versions.mobile, Hybrid.browser.versions.android, Hybrid.browser.versions.ios);
         } else {
             callback();
@@ -197,7 +201,7 @@
     /**
      * 获取URL上的参数
      * @param name 参数名
-     * @returns 参数值
+     * @returns string 参数值
      */
     urlParam: function (name) {
         let reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -205,6 +209,6 @@
         if (result != null) {
             return decodeURIComponent(result[2]);
         }
-        return null;
+        return "";
     },
 });
