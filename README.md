@@ -4,7 +4,7 @@
 
 > 为了方便`Web`与移动端的交互实现，该库也对`js`端稍作封装
 >
-> 同时，对`Android`端也简略地封装了下，具体请参考[`HybridBridge`](https://github.com/yhyzgn/Widgets#HybridBridge)；`IOS`端目前仅支持`JavaScriptCore`框架，直接按其用法使用即可。
+> 同时，对`Android`端也简略地封装了下，具体请参考[`HybridBridge`](https://github.com/yhyzgn/Widgets#HybridBridge)；`IOS`端目前支持`WKWebView`控件和`JavaScriptCore`框架，直接按其用法使用即可。
 
 
 

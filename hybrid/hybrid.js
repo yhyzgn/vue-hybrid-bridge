@@ -156,20 +156,34 @@
         const outArgs = arguments;
         Hybrid.environment(function (mobile, android, ios) {
             if (mobile) {
-                let bridge = android ? Hybrid.config.bridge : ios ? window : undefined;
+                // Android 或者 IOS（WKWebView或者UIWebView）
+                // Android使用桥梁【bridge[方法名](参数)】方式
+                // WKWebView使用【window.webkit.messageHandlers[方法名].postMessage(参数)】方式
+                // UIWebView使用【JavaScriptCore】库，直接【window[方法名](参数)】方式
+                let bridge = android ? Hybrid.config.bridge : ios ? (window.webkit.messageHandlers || window) : undefined;
 
                 if (bridge === undefined || typeof bridge[fn] === "undefined") {
                     return;
                 }
 
                 if (outArgs.length === 1) {
-                    bridge[fn]();
+                    if (window.webkit.messageHandlers) {
+                        bridge[fn].postMessage();
+                    } else {
+                        bridge[fn]();
+                    }
                 } else if (outArgs.length >= 2) {
                     if (typeof outArgs[1] !== "object") {
                         throw new Error("需要传递到原生环境的参数必须是js对象类型");
                     }
                     args = JSON.stringify(args);
-                    let result = bridge[fn](args);
+
+                    let result;
+                    if (window.webkit.messageHandlers) {
+                        result = bridge[fn].postMessage(args);
+                    } else {
+                        result = bridge[fn](args);
+                    }
                     if (typeof callback === "function") {
                         callback(result);
                     }
