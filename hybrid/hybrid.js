@@ -149,7 +149,7 @@
     /**
      * js调用原生方法
      * @param fn 方法名称
-     * @param args 要传递的参数，必须是js对象类型（该参数可不传，代表不传递任何参数）
+     * @param args 要传递的参数，必须是【字符串、数字、布尔和js对象】四种类型之一（该参数可不传，代表不传递任何参数）
      * @param callback 方法调用结果的回调（该参数可不传，代表没有任何回调）
      */
     native: function (fn, args, callback) {
@@ -173,10 +173,12 @@
                         bridge[fn]();
                     }
                 } else if (outArgs.length >= 2) {
-                    if (typeof outArgs[1] !== "object") {
-                        throw new Error("需要传递到原生环境的参数必须是js对象类型");
+                    if (typeof outArgs[1] !== "string" && typeof outArgs[1] !== "number" && typeof outArgs[1] !== "boolean" && typeof outArgs[1] !== "object") {
+                        throw new Error("需要传递到原生环境的参数必须是【字符串、数字、布尔和js对象】四种类型之一");
                     }
-                    args = JSON.stringify(args);
+                    if (typeof outArgs[1] === "object") {
+                        args = JSON.stringify(args);
+                    }
 
                     let result;
                     if (window.webkit.messageHandlers) {
