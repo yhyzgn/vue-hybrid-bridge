@@ -160,16 +160,18 @@
                 // Android使用桥梁【bridge[方法名](参数)】方式
                 // WKWebView使用【window.webkit.messageHandlers[方法名].postMessage(参数)】方式
                 // UIWebView使用【JavaScriptCore】库，直接【window[方法名](参数)】方式
-                let bridge = android ? Hybrid.config.bridge : ios ? (window.webkit.messageHandlers || window) : undefined;
+                let bridge = android ? Hybrid.config.bridge : ios ? (isWKWebView() ? window.webkit.messageHandlers : window) : undefined;
 
                 if (bridge === undefined || typeof bridge[fn] === "undefined") {
                     return;
                 }
 
                 if (outArgs.length === 1) {
-                    if (window.webkit.messageHandlers) {
+                    if (isWKWebView()) {
+                        // WKWebView
                         bridge[fn].postMessage();
                     } else {
+                        // Android和IOS的UIWebView
                         bridge[fn]();
                     }
                 } else if (outArgs.length >= 2) {
@@ -181,14 +183,24 @@
                     }
 
                     let result;
-                    if (window.webkit.messageHandlers) {
+                    if (isWKWebView()) {
+                        // WKWebView
                         result = bridge[fn].postMessage(args);
                     } else {
+                        // Android和IOS的UIWebView
                         result = bridge[fn](args);
                     }
                     if (typeof callback === "function") {
                         callback(result);
                     }
+                }
+
+                /**
+                 * 判断是否是IOS的WKWebView
+                 * @returns {boolean} 是否是IOS的WKWebView
+                 */
+                function isWKWebView() {
+                    return typeof window.webkit !== "undefined" && typeof window.webkit.messageHandlers !== "undefined";
                 }
             } else {
                 throw new Error("该方法仅支持移动端");
