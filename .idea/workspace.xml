@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -15,7 +16,41 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="hybrid.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#127#0" />
+                <element signature="e#218#260#0" />
+                <element signature="e#428#431#0" />
+                <element signature="e#439#722#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,8 +83,9 @@
         <option value="$PROJECT_DIR$/hybrid/config.json" />
         <option value="$PROJECT_DIR$/hybrid/easy.js" />
         <option value="$PROJECT_DIR$/hybrid/Hybrid.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/hybrid/hybrid.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -97,7 +133,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/Web/HybridBridge/hybrid/config.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -134,16 +170,19 @@
       <workItem from="1529314342636" duration="1278000" />
       <workItem from="1529479843828" duration="403000" />
       <workItem from="1529741587989" duration="1451000" />
+      <workItem from="1530682819830" duration="74000" />
+      <workItem from="1530682913360" duration="1081000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67813000" />
+    <option name="totallyTimeSpent" value="68968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24815595" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1975764" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -169,6 +208,19 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5691">
+          <caret line="271" column="30" lean-forward="true" selection-start-line="271" selection-start-column="30" selection-end-line="271" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#127#0" />
+            <element signature="e#218#260#0" />
+            <element signature="e#428#431#0" />
+            <element signature="e#439#722#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1827">
@@ -234,58 +286,30 @@
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="216" column="7" lean-forward="true" selection-start-line="216" selection-start-column="7" selection-end-line="216" selection-end-column="7" />
+        <state relative-caret-position="273">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
           <folding>
             <element signature="e#0#127#0" />
             <element signature="e#218#260#0" />
-            <element signature="e#374#412#0" />
             <element signature="e#428#431#0" />
             <element signature="e#439#722#0" />
-            <element signature="e#735#989#0" />
-            <element signature="e#996#1022#0" />
-            <element signature="e#1036#2068#0" />
-            <element signature="e#1068#1977#0" />
-            <element signature="e#1132#1966#0" />
-            <element signature="e#2075#2173#0" />
-            <element signature="e#2212#3746#0" />
-            <element signature="e#2360#2452#0" />
-            <element signature="e#2458#2581#0" />
-            <element signature="e#2609#3740#0" />
-            <element signature="e#2646#2728#0" />
-            <element signature="e#2753#2882#0" />
-            <element signature="e#2795#2868#0" />
-            <element signature="e#2946#3728#0" />
-            <element signature="e#3086#3672#0" />
-            <element signature="e#3181#3654#0" />
-            <element signature="e#3311#3632#0" />
-            <element signature="e#3753#3849#0" />
-            <element signature="e#3890#3948#0" />
-            <element signature="e#3955#4027#0" />
-            <element signature="e#4062#4113#0" />
-            <element signature="e#4120#4246#0" />
-            <element signature="e#4281#4622#0" />
-            <element signature="e#4319#4361#0" />
-            <element signature="e#4431#4549#0" />
-            <element signature="e#4475#4539#0" />
-            <element signature="e#4563#4616#0" />
-            <element signature="e#4629#4798#0" />
-            <element signature="e#4841#7128#0" />
-            <element signature="e#4981#5020#0" />
-            <element signature="e#7135#7257#0" />
-            <element signature="e#7295#7711#0" />
-            <element signature="e#7718#7796#0" />
-            <element signature="e#7827#8078#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="80" column="25" lean-forward="true" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+        <state relative-caret-position="447">
+          <caret line="69" column="31" lean-forward="true" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
         </state>
       </provider>
     </entry>
