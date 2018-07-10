@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hybrid/hybrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid/hybrid.js" afterDir="false" />
-    </list>
+    <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,26 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="hybrid.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="87" column="17" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -151,16 +129,15 @@
       <workItem from="1527211543359" duration="6056000" />
       <workItem from="1527233876718" duration="2948000" />
       <workItem from="1528641093246" duration="2225000" />
-      <workItem from="1529314342636" duration="1278000" />
+      <workItem from="1529314342636" duration="1513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65959000" />
+    <option name="totallyTimeSpent" value="66194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24815595" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -248,8 +225,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="87" column="17" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="17" />
+        <state relative-caret-position="240">
+          <caret line="198" column="6" lean-forward="true" selection-start-line="198" selection-start-column="6" selection-end-line="198" selection-end-column="6" />
         </state>
       </provider>
     </entry>
