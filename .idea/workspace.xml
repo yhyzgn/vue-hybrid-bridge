@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="" />
+    <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/hybrid/hybrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/hybrid/hybrid.js" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -14,11 +16,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <file leaf-file-name="hybrid.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="284" column="44" lean-forward="true" selection-start-line="284" selection-start-column="44" selection-end-line="284" selection-end-column="44" />
+            <state relative-caret-position="462">
+              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+              <folding>
+                <element signature="e#218#260#0" />
+                <element signature="e#374#412#0" />
+                <element signature="e#428#431#0" />
+                <element signature="e#439#722#0" />
+                <element signature="e#735#991#0" />
+                <element signature="e#998#1024#0" />
+                <element signature="e#1038#2070#0" />
+                <element signature="e#1070#1979#0" />
+                <element signature="e#1134#1968#0" />
+                <element signature="e#2077#2175#0" />
+                <element signature="e#2214#3954#0" />
+                <element signature="e#2305#2369#0" />
+                <element signature="e#2459#2505#0" />
+                <element signature="e#2511#2586#0" />
+                <element signature="e#2614#3948#0" />
+                <element signature="e#2640#2769#0" />
+                <element signature="e#2682#2755#0" />
+                <element signature="e#2833#3936#0" />
+                <element signature="e#2993#3880#0" />
+                <element signature="e#3088#3862#0" />
+                <element signature="e#3518#3840#0" />
+                <element signature="e#3961#4057#0" />
+                <element signature="e#4098#4156#0" />
+                <element signature="e#4163#4235#0" />
+                <element signature="e#4270#4321#0" />
+                <element signature="e#4328#4486#0" />
+                <element signature="e#4529#5492#0" />
+                <element signature="e#4567#4708#0" />
+                <element signature="e#4742#5231#0" />
+                <element signature="e#4832#4900#0" />
+                <element signature="e#5014#5154#0" />
+                <element signature="e#5062#5140#0" />
+                <element signature="e#5160#5221#0" />
+                <element signature="e#5301#5419#0" />
+                <element signature="e#5345#5409#0" />
+                <element signature="e#5433#5486#0" />
+                <element signature="e#5499#5668#0" />
+                <element signature="e#5711#7998#0" />
+                <element signature="e#5807#7990#0" />
+                <element signature="e#5833#7913#0" />
+                <element signature="e#5851#5890#0" />
+                <element signature="e#6314#6361#0" />
+                <element signature="e#6405#6690#0" />
+                <element signature="e#6446#6556#0" />
+                <element signature="e#6562#6672#0" />
+                <element signature="e#6721#7585#0" />
+                <element signature="e#6882#6987#0" />
+                <element signature="e#7044#7120#0" />
+                <element signature="e#7193#7316#0" />
+                <element signature="e#7322#7445#0" />
+                <element signature="e#7502#7567#0" />
+                <element signature="e#7603#7719#0" />
+                <element signature="e#7759#7899#0" />
+                <element signature="e#7919#7980#0" />
+                <element signature="e#8005#8127#0" />
+                <element signature="e#8165#8712#0" />
+                <element signature="e#8201#8573#0" />
+                <element signature="e#8428#8563#0" />
+                <element signature="e#8579#8706#0" />
+                <element signature="e#8719#8797#0" />
+                <element signature="e#8828#9079#0" />
+                <element signature="e#8993#9054#0" />
+                <element signature="e#9086#9214#0" />
+                <element signature="e#9247#9541#0" />
+                <element signature="e#9285#9327#0" />
+                <element signature="e#9361#9479#0" />
+                <element signature="e#9405#9469#0" />
+                <element signature="e#9485#9535#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,9 +128,9 @@
         <option value="$PROJECT_DIR$/hybrid/config.json" />
         <option value="$PROJECT_DIR$/hybrid/easy.js" />
         <option value="$PROJECT_DIR$/hybrid/Hybrid.js" />
-        <option value="$PROJECT_DIR$/hybrid/hybrid.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/hybrid/hybrid.js" />
       </list>
     </option>
   </component>
@@ -78,7 +150,7 @@
     <option name="height" value="688" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -164,20 +236,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68973000" />
+    <option name="totallyTimeSpent" value="69146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.21468298" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -203,7 +275,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="2757">
           <caret line="284" column="44" lean-forward="true" selection-start-line="284" selection-start-column="44" selection-end-line="284" selection-end-column="44" />
         </state>
       </provider>
@@ -296,8 +368,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="249" column="26" lean-forward="true" selection-start-line="249" selection-start-column="26" selection-end-line="249" selection-end-column="26" />
+        <state relative-caret-position="462">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#218#260#0" />
+            <element signature="e#374#412#0" />
+            <element signature="e#428#431#0" />
+            <element signature="e#439#722#0" />
+            <element signature="e#735#991#0" />
+            <element signature="e#998#1024#0" />
+            <element signature="e#1038#2070#0" />
+            <element signature="e#1070#1979#0" />
+            <element signature="e#1134#1968#0" />
+            <element signature="e#2077#2175#0" />
+            <element signature="e#2214#3954#0" />
+            <element signature="e#2305#2369#0" />
+            <element signature="e#2459#2505#0" />
+            <element signature="e#2511#2586#0" />
+            <element signature="e#2614#3948#0" />
+            <element signature="e#2640#2769#0" />
+            <element signature="e#2682#2755#0" />
+            <element signature="e#2833#3936#0" />
+            <element signature="e#2993#3880#0" />
+            <element signature="e#3088#3862#0" />
+            <element signature="e#3518#3840#0" />
+            <element signature="e#3961#4057#0" />
+            <element signature="e#4098#4156#0" />
+            <element signature="e#4163#4235#0" />
+            <element signature="e#4270#4321#0" />
+            <element signature="e#4328#4486#0" />
+            <element signature="e#4529#5492#0" />
+            <element signature="e#4567#4708#0" />
+            <element signature="e#4742#5231#0" />
+            <element signature="e#4832#4900#0" />
+            <element signature="e#5014#5154#0" />
+            <element signature="e#5062#5140#0" />
+            <element signature="e#5160#5221#0" />
+            <element signature="e#5301#5419#0" />
+            <element signature="e#5345#5409#0" />
+            <element signature="e#5433#5486#0" />
+            <element signature="e#5499#5668#0" />
+            <element signature="e#5711#7998#0" />
+            <element signature="e#5807#7990#0" />
+            <element signature="e#5833#7913#0" />
+            <element signature="e#5851#5890#0" />
+            <element signature="e#6314#6361#0" />
+            <element signature="e#6405#6690#0" />
+            <element signature="e#6446#6556#0" />
+            <element signature="e#6562#6672#0" />
+            <element signature="e#6721#7585#0" />
+            <element signature="e#6882#6987#0" />
+            <element signature="e#7044#7120#0" />
+            <element signature="e#7193#7316#0" />
+            <element signature="e#7322#7445#0" />
+            <element signature="e#7502#7567#0" />
+            <element signature="e#7603#7719#0" />
+            <element signature="e#7759#7899#0" />
+            <element signature="e#7919#7980#0" />
+            <element signature="e#8005#8127#0" />
+            <element signature="e#8165#8712#0" />
+            <element signature="e#8201#8573#0" />
+            <element signature="e#8428#8563#0" />
+            <element signature="e#8579#8706#0" />
+            <element signature="e#8719#8797#0" />
+            <element signature="e#8828#9079#0" />
+            <element signature="e#8993#9054#0" />
+            <element signature="e#9086#9214#0" />
+            <element signature="e#9247#9541#0" />
+            <element signature="e#9285#9327#0" />
+            <element signature="e#9361#9479#0" />
+            <element signature="e#9405#9469#0" />
+            <element signature="e#9485#9535#0" />
+          </folding>
         </state>
       </provider>
     </entry>

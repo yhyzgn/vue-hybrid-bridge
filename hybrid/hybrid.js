@@ -6,7 +6,7 @@
  * desc    : 与原生交互的js插件
  */
 
-(function (fn, extend) {
+;(function (fn, extend) {
     if (typeof fn !== "function" || typeof extend !== "object") {
         throw new Error("框架加载错误");
     }
