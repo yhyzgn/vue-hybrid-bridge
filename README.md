@@ -48,8 +48,8 @@
 
   ```javascript
   config: {
-      // 是否使用严格模式（不只是识别移动端内核浏览器，还需要判断“urlFlagName”参数），默认为true
-      strict: true,
+      // 是否使用严格模式（不只是识别移动端内核浏览器，还需要判断“urlFlagName”参数），默认为false
+      strict: false,
       // URL标识名称
       urlFlagName: "platform",
       // URL标识值
