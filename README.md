@@ -1,6 +1,6 @@
-# HybridBridge
+# `hybrid`
 
-![widget](https://img.shields.io/badge/HybridBridge-1.0.0-brightgreen.svg)
+![widget](https://img.shields.io/badge/hybrid-1.0.0-brightgreen.svg)
 
 > 为了方便`Web`与移动端的交互实现，该库也对`js`端稍作封装
 >
@@ -12,12 +12,18 @@
 
 * 下载`hybrid.js`，并引入到项目中
 
-  * 下载地址：[`hybrid.js`](https://github.com/yhyzgn/HybridBridge/blob/master/hybrid/hybrid.js)
+  * `CDN`引入
 
-  * 引入到项目中
+    > 将`${version}`替换为上边图标中的版本号
 
     ```html
-    <script src="hybrid/hybrid.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yhyzgn/hybrid@${version}/dist/hybrid.js"></script>
+    ```
+
+  * 下载地址：[`hybrid.js`](https://github.com/yhyzgn/hybrid/blob/master/dist/hybrid.js)，引入到项目中
+
+    ```html
+    <script src="dist/hybrid.js"></script>
     ```
 
 * 初始化
