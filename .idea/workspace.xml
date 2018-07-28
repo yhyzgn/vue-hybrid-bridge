@@ -45,10 +45,10 @@
         <option value="$PROJECT_DIR$/hybrid/aa.js" />
         <option value="$PROJECT_DIR$/hybrid/config.json" />
         <option value="$PROJECT_DIR$/hybrid/easy.js" />
-        <option value="$PROJECT_DIR$/hybrid/Hybrid.js" />
+        <option value="$PROJECT_DIR$/dist/hybrid.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/hybrid/hybrid.js" />
+        <option value="$PROJECT_DIR$/dist/hybrid.js" />
       </list>
     </option>
   </component>
@@ -76,12 +76,12 @@
         <subPane>
           <expand>
             <path>
-              <item name="HybridBridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HybridBridge" type="462c0819:PsiDirectoryNode" />
+              <item name="hybrid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hybrid" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="HybridBridge" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HybridBridge" type="462c0819:PsiDirectoryNode" />
+              <item name="hybrid" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hybrid" type="462c0819:PsiDirectoryNode" />
               <item name="hybrid" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -93,11 +93,11 @@
           <expand>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="HybridBridge" type="cbb8eebc:String" user="HybridBridge" />
+              <item name="hybrid" type="cbb8eebc:String" user="hybrid" />
             </path>
             <path>
               <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="HybridBridge" type="cbb8eebc:String" user="HybridBridge" />
+              <item name="hybrid" type="cbb8eebc:String" user="hybrid" />
               <item name=".idea" type="cbb8eebc:String" user=".idea" />
             </path>
           </expand>
@@ -108,7 +108,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/Web/HybridBridge/hybrid/config.json" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/Web/hybrid/hybrid/config.json" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -186,7 +186,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
+    <entry file="file://$PROJECT_DIR$/dist/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2196">
           <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
@@ -203,14 +203,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
+    <entry file="file://$PROJECT_DIR$/dist/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5691">
           <caret line="271" column="30" lean-forward="true" selection-start-line="271" selection-start-column="30" selection-end-line="271" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
+    <entry file="file://$PROJECT_DIR$/dist/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1827">
           <caret line="87" column="17" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="17" />
@@ -221,47 +221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1092">
           <caret line="52" column="46" lean-forward="true" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/easy.js" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="15" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/easy.js" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1008">
-          <caret line="48" column="15" lean-forward="true" selection-start-line="48" selection-start-column="15" selection-end-line="48" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/easy.js" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/aa.js" />
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es5.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="411" column="26" lean-forward="true" selection-start-line="411" selection-start-column="26" selection-end-line="411" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/config.json" />
-    <entry file="file://$PROJECT_DIR$/hybrid/easy.js" />
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="15231" column="4" selection-start-line="15231" selection-start-column="4" selection-end-line="15231" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -289,7 +248,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hybrid/hybrid.js">
+    <entry file="file://$PROJECT_DIR$/dist/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="119" column="41" lean-forward="true" selection-start-line="119" selection-start-column="41" selection-end-line="119" selection-end-column="41" />
