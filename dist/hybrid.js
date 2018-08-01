@@ -185,7 +185,8 @@
                 if (outArgs.length === 1) {
                     if (isWKWebView()) {
                         // WKWebView
-                        bridge[fn].postMessage();
+                        // 注意：一定要传null，否则触发不了原生方法
+                        bridge[fn].postMessage(null);
                     } else {
                         // Android和IOS的UIWebView
                         bridge[fn]();
