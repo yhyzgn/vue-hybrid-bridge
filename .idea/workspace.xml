@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/hybrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/hybrid.js" afterDir="false" />
-    </list>
+    <list default="true" id="905ad602-b133-498e-8f40-0021046fa7a2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,8 +17,8 @@
       <file leaf-file-name="hybrid.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/hybrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+            <state relative-caret-position="209">
+              <caret line="188" column="47" selection-start-line="188" selection-start-column="47" selection-end-line="188" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -166,12 +164,12 @@
       <workItem from="1530682913360" duration="1725000" />
       <workItem from="1532713320317" duration="77000" />
       <workItem from="1532788647654" duration="131000" />
-      <workItem from="1533113745145" duration="85000" />
+      <workItem from="1533113745145" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69439000" />
+    <option name="totallyTimeSpent" value="69469000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -184,7 +182,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.26555556" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.2647386" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -295,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/hybrid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="20" column="16" lean-forward="true" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        <state relative-caret-position="209">
+          <caret line="188" column="47" selection-start-line="188" selection-start-column="47" selection-end-line="188" selection-end-column="47" />
         </state>
       </provider>
     </entry>
