@@ -1,6 +1,6 @@
 # `hybrid`
 
-![widget](https://img.shields.io/badge/hybrid-1.0.1-brightgreen.svg)
+![hybrid](https://img.shields.io/badge/hybrid-1.0.1-brightgreen.svg)
 
 > 为了方便`Web`与移动端的交互实现，该库也对`js`端稍作封装
 >
