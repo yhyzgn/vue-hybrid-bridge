@@ -2,7 +2,7 @@
  * author  : 颜洪毅
  * e-mail  : yhyzgn@gmail.com
  * time    : 2018-05-24 11:07
- * version : 1.0.0
+ * version : 1.0.1
  * desc    : 与原生交互的js插件
  */
 
