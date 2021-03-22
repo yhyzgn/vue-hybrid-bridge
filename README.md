@@ -1,147 +1,147 @@
-# `hybrid`
+# `vue-hybrid-bridge`
 
-![hybrid](https://img.shields.io/badge/hybrid-1.0.1-brightgreen.svg)
+![npm](https://img.shields.io/npm/v/vue-hybrid-bridge?color=orange&label=vue-hybrid-bridge&style=flat-square)
 
 > 为了方便`Web`与移动端的交互实现，该库也对`js`端稍作封装
 >
-> 同时，对`Android`端也简略地封装了下，具体请参考[`HybridBridge`](https://github.com/yhyzgn/Widgets#HybridBridge)；`IOS`端目前支持`WKWebView`控件和`JavaScriptCore`框架，直接按其用法使用即可。
+> `Android`端支持`SDK`自带`WebView`集成；`IOS`端目前支持`WKWebView`控件和`JavaScriptCore`框架的`JSExport`方式，直接按其用法使用即可。
 
+## `main.js`
 
+```js
+import {createApp} from 'vue'
+import App from './App.vue'
 
-#### 用法
+import {HybridBridge} from 'vue-hybrid-bridge'
 
-* 下载`hybrid.js`，并引入到项目中
+const app = createApp(App)
+  .use(HybridBridge)
+// 或者
+// .use(HybridBridge, {namespace: 'app'}) // 默认即为 app
+// 后续可直接通过 this[`$${namespace}`] 调用
+app.mount('#app')
+```
 
-  * `CDN`引入
+## 1、当前 `Vue` 实例直接使用
 
-    > 将`${version}`替换为上边图标中的版本号
+> `this.$app.inject('fnName', () => {})`
+> 
+> `this.$app.handle('fnName', {})`
 
-    ```html
-    <script src="https://cdn.jsdelivr.net/gh/yhyzgn/hybrid@${version}/dist/hybrid.js"></script>
-    ```
+```vue
 
-  * 下载地址：[`hybrid.js`](https://github.com/yhyzgn/hybrid/blob/master/dist/hybrid.js)，引入到项目中
-
-    ```html
-    <script src="dist/hybrid.js"></script>
-    ```
-
-* 初始化
-
-  > 无论页面是否已经加载完成都可以初始化
-  >
-  > 第一个参数是一些配置，改参数可不传，使用默认配置
-  >
-  > 第二个参数是初始化完成的相关回调
-  >
-  > **注意：后续的一些列操作都需要初始化成功作为前提**
-
-  ```javascript
-  // 使用自定义配置
-  // Hy.init({}, function(){});
-  Hy.init({
-      urlFlagValue: "app"
-  }, function (mobile, android, ios) {
-      environment(mobile, android, ios);
-      
-      // 后续的一些列操作都需要在这里执行  	
-  });
-  
-  // 使用默认配置时，可以这样初始化
-  Hy.init(function(){});
-  ```
-  > `Hybrid.config`配置说明
-
-  ```javascript
-  config: {
-      // 是否使用严格模式（不只是识别移动端内核浏览器，还需要判断“urlFlagName”参数），默认为false
-      strict: false,
-      // URL标识名称
-      urlFlagName: "platform",
-      // URL标识值
-      urlFlagValue: "app",
-      // Android端交互桥梁名称
-      bridge: window.app
-  }
-  ```
-
-* 注册函数到`js`环境，供移动端调用
-
-  > 传入js对象
-
-  ```javascript
-  // {方法名：方法体}
-  Hy.register({
-      test: function (args) {
-          args = "接收到原生传过来的参数‘" + args + "’，我再通过原生窗口弹出！";
-          alert(args);
+<script>
+export default {
+  name: "Test",
+  created () {
+    // ********************************************************************
+    // 注册js方法，供原生调用
+    // 方式1、方法名-方法体
+    this.$app.inject('test', data => {
+      console.log(`原生调了js方法，并传了参数：${data}`)
+    }).then(() => {
+      // 注入成功
+    }).catch(err => {
+      // 注入失败
+      console.log(err)
+    })
+    
+    // 方式2、多个方法注入
+    this.$app.inject({
+      'test1': () => {
+      },
+      'test2': data => {
       }
-  });
-  ```
+      // ...
+    }).then(() => {
+      // 注入成功
+    }).catch(err => {
+      // 注入失败
+      console.log(err)
+    })
+    
+    
+    // ********************************************************************
+    // 调用原生提供的方法
+    // 1、无参数传递
+    this.$app.handle('method').then(data => {
+      // 调用成功
+      console.log(`js调了原生的方法，并接收到原生回传的结果：${data}`)
+    }).catch(err => {
+      // 调用失败
+    })
+    // 2、传递参数
+    this.$app.handle('method'< {
+      id: 22,
+      name: '一个东西'
+    }).then(data => {
+      // 调用成功
+      console.log(`js调了原生的方法，并接收到原生回传的结果：${data}`)
+    }).catch(err => {
+      // 调用失败
+    })
+  },
+  methods: {}
+}
+</script>
+```
 
-  > 也可以用key-value的方式
 
-  ```javascript
-  // (方法名，方法体)
-  Hy.register("test", function(args){
-      args = "接收到原生传过来的参数‘" + args + "’，我再通过原生窗口弹出！";
-      alert(args);
-  });
-  ```
+## 3、单独使用
 
-* 调用原生移动端的方法
+```js
+import {birdge} from "vue-hybrid-bridge"
 
-  > 只调用方法，不传递任何参数，也不需要返回值
+// ********************************************************************
+// 注册js方法，供原生调用
+// 跟上述方法类似，只需把 this.$app 换成 bridge，直接使用即可
+//
+// 方式1、方法名-方法体
+birdge.inject('test', (data) => {
+  console.log(`原生调了js方法，并传了参数：${data}`)
+}).then(() => {
+  // 注入成功
+}).catch(err => {
+  // 注入失败
+  console.log(err)
+})
 
-  ```javascript
-  // (方法名)
-  Hy.native("test");
-  ```
-
-  > 调用方法，并传递参数（参数必须是【字符串、数字、布尔和`js`对象】四种类型之一，使用`js`对象时底层使用`json`格式交互）
-
-  ```javascript
-  // （方法名，参数）
-  Hy.native("test", {
-      name: "张三",
-      age: 24,
-      desc: "js调用了原生方法"
-  });
-  ```
-
-  > 调用方法，不仅传递参数，还需要返回值
-
-  ```javascript
-  // （方法名，参数，接收返回值的回调函数）
-  Hy.native("test", {
-      name: "张三",
-      age: 24,
-      desc: "js调用了原生方法"
-  }, function (result) {
-      console.log(result);
-  });
-  ```
-
-* 其他无关函数
-
-  ```js
-  function print(text) {
-      console.log(text);
+// 方式2、多个方法注入
+birdge.inject({
+  'test1': () => {
+  },
+  'test2': data => {
   }
-  function environment(mobile, android, ios) {
-      if (mobile) {
-          if (android) {
-              print("Android")
-          } else if (ios) {
-              print("IOS")
-          } else {
-              print("Other mobile")
-          }
-      } else {
-          print("PC")
-      }
-  }
-  ```
+  // ...
+}).then(() => {
+  // 注入成功
+}).catch(err => {
+  // 注入失败
+  console.log(err)
+})
+
+
+// ********************************************************************
+// 调用原生提供的方法
+// 除了把 this.$app 换成 bridge 外，还需要传递第一个参数 namespace，否则将无法调用成功
+// 1、无参数传递
+birdge.handle('app', 'method').then(data => {
+  // 调用成功
+  console.log(`js调了原生的方法，并接收到原生回传的结果：${data}`)
+}).catch(err => {
+  // 调用失败
+})
+// 2、传递参数
+birdge.handle('app', 'method', {
+  id: 22,
+  name: '一个东西'
+}).then(data => {
+  // 调用成功
+  console.log(`js调了原生的方法，并接收到原生回传的结果：${data}`)
+}).catch(err => {
+  // 调用失败
+})
+```
 
 > 就这么多啦！！
 
@@ -150,7 +150,7 @@
 #### License
 
 ```tex
-Copyright 2018 yhyzgn
+Copyright 2021 yhyzgn
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -1,30 +1,38 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "module": "commonjs",
-    "declaration": false,
+    "declaration": true,
+    "declarationDir": "dist/types",
     "noImplicitAny": false,
     "noLib": false,
+    "allowJs": true,
+    "checkJs": true,
+    "sourceMap": true,
     "moduleResolution": "node",
+    "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
     "noEmit": true,
     "lib": [
       "ES5",
+      "ES6",
       "ES2015",
+      "ES2020",
       "DOM",
       "ScriptHost"
     ]
   },
+  "include": [
+    "src/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
   "filesGlob": [
     "./**/*.ts",
     "!./node_modules/**/*.ts"
   ],
-  "files": [
-    "./main.ts",
-    "./typings/es6-promise/es6-promise.d.ts"
-  ],
-  "compileOnSave": false,
-  "include": [
-    "**/*.ts"
-  ]
+  "compileOnSave": true
 }

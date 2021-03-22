@@ -7,10 +7,12 @@ const HybridBridge = {
     if (opts) {
       setConfig(opts)
     }
-    opts = getConfig()
-    app.config.globalProperties[`$${opts.namespace}`] = {
+    const namespace = getConfig().namespace
+    app.config.globalProperties[`$${namespace}`] = {
       inject: bridge.inject,
-      handle: bridge.handle
+      handle: function (fnName: string, data?: object): Promise<any> {
+        return bridge.handle(namespace, fnName, data)
+      }
     }
   }
 }
