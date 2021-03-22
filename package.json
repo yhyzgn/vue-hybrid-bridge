@@ -1,0 +1,31 @@
+{
+  "name": "vue-hybrid-bridge",
+  "version": "2.0.0",
+  "description": "JsBridge for hybrid development.",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "android",
+    "ios",
+    "iphone",
+    "hybrid",
+    "bridge",
+    "js-bridge",
+    "vue",
+    "vue-bridge"
+  ],
+  "author": "yhyzgn",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhyzgn/vue-hybrid-bridge.git"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@types/es6-promise": "^3.3.0"
+  }
+}

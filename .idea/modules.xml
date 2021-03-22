@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/hybrid.iml" filepath="$PROJECT_DIR$/.idea/hybrid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/vue-hybrid-bridge.iml" filepath="$PROJECT_DIR$/.idea/vue-hybrid-bridge.iml" />
     </modules>
   </component>
 </project>
